@@ -89,7 +89,7 @@ z9ZFGuylwR3uJpIxuP/o9E8Zy2cA3/3NfWhQNXgi7MmyhyacfWPAx8aPH7MQrDcK
 
 既然公鑰和私鑰放在一起，我們希望可以將公鑰提取出來，放在另一個檔案，方便派發給他人，這是可運行：
 ```
-openssl rsa -in dora_private.pem -pubout -out dora_public.pem
+openssl rsa -in key_pair.pem -pubout -out public_key.pem
 ```
 - `rsa`:告訴openssl這個檔案是用了RSA
 - `-in key_pair.pem`:指定輸入檔案為剛才的檔案
@@ -163,7 +163,7 @@ openssl rsautl -decrypt -inkey key_pair.pem -in my_message.encrypted
 ### 用私鑰簽署
 
 ```
-openssl dgst -sha256 -sign dora_private.pem -out message.dora.signature message.txt
+openssl dgst -sha256 -sign key_pair.pem -out my_message.sign my_message.txt
 ```
 - `dgst`:代表digital signature 數位簽章。
 - `-sha256`:一種雜湊算法，將被簽署的內容變成固定長度的字串，加快並化簡加密的過程，要了解更多可以搜尋Hash function。
@@ -184,7 +184,7 @@ k�m��Z�+��Ǡ��O�A�eb�QA�ء��a�^��-�t��ɓ
 ### 用公鑰驗證簽名真實性
 
 ```
-openssl dgst -sha256 -verify dora_public.pem -signature message.dora.signature message.txt
+openssl dgst -sha256 -verify public_key.pem -signature my_message.sign my_message.txt
 ```
 - `dgst`:代表digital signature 數位簽章
 - `-sha256`:一種雜湊算法
