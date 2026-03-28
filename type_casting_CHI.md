@@ -279,3 +279,11 @@ lldb trytry_x86								   // 除錯
 那麼我們從中學到了什麼教訓呢？那就是，永遠不要在代碼中做任何可能導致未定義行為(undefined behavior)的事情！
 
 希望你覺得這篇文章很有趣！我是 Kelvin，一個正在學習編程的人。
+
+# 延伸閱讀
+
+1. IEEE754 浮點數： https://zh.wikipedia.org/zh-tw/IEEE_754
+2. Computer System: A Programmer's Perspective: https://github.com/xubenji/csapp/blob/master/Computer%20Systems%20A%20Programmers%20Perspective%20(3rd).pdf
+3. CPU指令集架構簡介:https://zh.wikipedia.org/zh-tw/%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%A7%8B
+4. ARM架構CPU手冊：https://developer.arm.com/documentation/
+5. x86_64架構CPU手冊：https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
