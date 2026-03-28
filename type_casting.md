@@ -34,7 +34,7 @@ float f = (float)x;
 // frac part = 11 1111 1111 1111 1111 1111 1 | 111 1111  (truncated)
 // f = 0b 0 | 10011101 | 1111 1111 1111 1111 1111 111
 // f = 0b 0100 1110 1111 1111 1111 1111 1111 1111
-// f = 0x 47ffffff (This is how I predict f would be)
+// f = 0x 4effffff (This is how I predict f would be)
 ```
 
 However, when I tested it out using `lldb`, the actual value of `f` is `0x4f000000`.
